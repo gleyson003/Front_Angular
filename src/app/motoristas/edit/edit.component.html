@@ -1,0 +1,52 @@
+<div class="container">
+
+  <div class="d-flex justify-content-between">
+    <h4>Editar cadastro</h4>
+    <a href="#" routerLink="/motoristas/index" class="btn btn-primaryt">Voltar</a>
+  </div>
+
+  <hr>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+
+
+      <div class="form-group row">
+          <div class="col-md-6 ">
+            <label for="nome">NOME:</label>
+            <input
+              formControlName="nome"
+              [(ngModel)]="motoristas.nome"
+              id="nome"
+              type="text"
+              class="form-control">
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <div class="col-md-6 ">
+            <label for="cpf">CPF:</label>
+            <input
+              formControlName="cpf"
+              [(ngModel)]="motoristas.cpf"
+              id="cpf"
+              type="text"
+              class="form-control">
+          </div>
+      </div>
+
+      <div class="form-group row">
+          <div class="col-md-6 ">
+            <label for="cnh">CNH:</label>
+            <input
+              [(ngModel)]="motoristas.cnh"
+              formControlName="cnh"
+              id="cnh"
+              type="text"
+              class="form-control">
+          </div>
+      </div>
+
+      <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Atualizar</button>
+  </form>
+</div>
+

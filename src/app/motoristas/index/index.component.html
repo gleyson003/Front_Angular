@@ -1,0 +1,30 @@
+<section>
+
+  <div class="d-flex justify-content-between">
+    <h4>Lista de Motoristas</h4>
+    <a routerLink="/motoristas/create" class="btn btn-success">Cadastrar novo motorista</a>
+  </div>
+
+  <br>
+
+  <table class="table ">
+    <tr>
+      <th width="100px">ID</th>
+      <th width="100px">NOME</th>
+      <th width="100px">CPF</th>
+      <th width="100px">CNH</th>
+      <th width="220px">Action</th>
+    </tr>
+    <tr *ngFor="let motorista of motoristas">
+      <td>{{ motorista.id }}</td>
+      <td>{{ motorista.nome }}</td>
+      <td>{{ motorista.cpf }}</td>
+      <td>{{ motorista.cnh }}</td>
+      <td>
+        <a href="#" [routerLink]="['/motoristas/', 'edit', motorista.id  ]" class="btn btn-primary">Editar</a>
+        <button type="button" (click)="deleteMotoristas(motorista.id)" class="btn btn-danger">Excluir</button>
+      </td>
+    </tr>
+  </table>
+</section>
+

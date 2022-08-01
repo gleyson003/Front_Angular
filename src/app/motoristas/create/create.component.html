@@ -1,0 +1,47 @@
+<div>
+
+  <div class="d-flex justify-content-between">
+    <h4>Cadastrar Motorista</h4>
+    <a href="#" routerLink="/motoristas/index" class="btn btn-primaryt">Voltar</a>
+  </div>
+
+  <hr/>
+
+    <form [formGroup]="form" (ngSubmit)="submit()">
+
+        <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="title">NOME:</label>
+              <input
+                formControlName="nome"
+                id="nome"
+                type="text"
+                class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="cpf">CPF:</label>
+              <input
+                formControlName="cpf"
+                id="cpf"
+                type="text"
+                class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-md-6 ">
+              <label for="cnh">CNH:</label>
+              <input
+                formControlName="cnh"
+                id="cnh"
+                type="text"
+                class="form-control">
+            </div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Enviar</button>
+    </form>
+</div>
